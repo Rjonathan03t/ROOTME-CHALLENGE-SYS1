@@ -1,0 +1,45 @@
+CHALLENGE-SYS1 (Root-me)
+
+ 1 - FTP 
+
+  1- a) Faire clique droite sur le boutton demarrer le challenge puis recuperer son url , l'ouvrir dans un nouvel onglet,
+et cela va telecharger automatiquement le fichier lie a ce challenge.
+  1- b) Ouvrir le fichier telecharge dans wireshark , faire clique droite sur un protocole FTP,clique sur suivre et lancer
+le flux tcp , le mot de passe se trouve dans ce flux.
+
+
+
+ 2 - TELNET
+
+  1- a) 1 ere etape idem que celui de ftp. 
+  2- b) 2 eme etape idem celui de ftp mais on  fait le clique droite avec un protocole TELNET, on trouve le mot de passe 
+dans le flux tcp.
+
+
+
+ 3 - ETHERNET 
+
+  1- a) Lancer le challenge en appuyant sur le boutton demarrer le challenge, cela nous envoie une page composee d'un code
+de type HEX.
+  2- b) On change le type de code en ASCII en mettant ce code dans un convertisseur "hex to ASCII".
+  3- c) Dans le code ASCII on voit un code en base64 qu'il faut encore  convertisser dans un convertisseur "base64 decode".
+  4- d) le code du challenge est ce code base64 convertise.
+
+
+
+ 4 - TWITTER
+
+  1- a) 1 ere etape idem que celui de ftp et telnet.
+  2- b) 2 eme etape idem que celui de ftp et telnet mais avec un protocol http.
+  3- c) Dedans se trouve un code a base64 qu'il faut convertir, et ce code convertisse est le code du challenge.
+
+
+
+ 5 - BLUETOOTH
+
+  1- a) 1 ere etape idem que celui de ftp,telnet et twitter mais con ouvre le fichier a partir de wireshark apres.
+  2- b) On fait clique gauche sur wireless dans la barre qui se trouve en haut, clique sur eauipement bluetooth,
+et dedans se trouve l'adresse MAC et le nom du telephone qu'il faut concatener et apres encrypter
+  3- c) Avant d'encrypter le code , changer les lettres dans l'adresse Mac en majuscule.
+  4- d) Encrypter le code sur SHA1 decrypte , en cliquant sur le boutton encrypt dans le site, le code du challenge
+est le resulat de cet encryptage. 
